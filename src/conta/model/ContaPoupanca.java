@@ -1,5 +1,7 @@
 package conta.model;
 
+import conta.controller.Override;
+
 public class ContaPoupanca extends Conta{
 
 	private int aniversario;
@@ -22,5 +24,5 @@ public class ContaPoupanca extends Conta{
 		super.visualizar();
 		System.out.println("Aniversário da conta: " + this.aniversario);
 	}
-
+    
 }
