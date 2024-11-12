@@ -53,7 +53,7 @@ public abstract class Conta {
 	}
 
 	public void setSaldo(float saldo) {
-		saldo = saldo;
+		this.saldo = saldo;
 	}
 
 	public boolean sacar(float valor) {
