@@ -19,7 +19,6 @@ public class menu {
 		String titular;
 		float saldo, limite, valor;
 
-		System.out.println("\nCriar Contas\n");
 
 		ContaCorrente cc1 = new ContaCorrente(contas.gerarNumero(), 27, 1, "Faruk Rafael", 4000f, 300.0f);
 		contas.cadastrar(cc1);
@@ -30,17 +29,16 @@ public class menu {
 		ContaPoupanca cp1 = new ContaPoupanca(contas.gerarNumero(), 125, 2, "Lorenna Generation", 9000f, 12);
 		contas.cadastrar(cp1);
 
-		ContaPoupanca cp2 = new ContaPoupanca(contas.gerarNumero(), 125, 2, "Felipe Generation", 8000f, 15);
+		ContaPoupanca cp2 = new ContaPoupanca(contas.gerarNumero(), 125, 2, "Geandro Generation", 8000f, 15);
 		contas.cadastrar(cp2);
 
 		contas.listarTodas();
 
-		System.out.println(Cores.ANSI_GREEN_BACKGROUND_BRIGHT);
+		System.out.println();
 		while (true) {
-			System.out.println(Cores.TEXT_PURPLE_BOLD_BRIGHT + Cores.ANSI_BLACK_BACKGROUND
-					+ "*****************************************************");
+			System.out.println(Cores.TEXT_WHITE_BOLD +"*****************************************************");
 			System.out.println("                                                     ");
-			System.out.println(" BANCO JABUTI - O Banco que Faz Seu Futuro Crescer!  ");
+			System.out.println(Cores.TEXT_CYAN_BOLD + " BANCO JABUTI - O Banco que Faz Seu Futuro Crescer!  " + Cores.TEXT_RESET);
 			System.out.println("                                                     ");
 			System.out.println("*****************************************************");
 			System.out.println("                                                     ");
@@ -52,11 +50,11 @@ public class menu {
 			System.out.println("            6 - Sacar                                ");
 			System.out.println("            7 - Depositar                            ");
 			System.out.println("            8 - Transferir valores entre Contas      ");
-			System.out.println("            9 - Sair                                 ");
+			System.out.println(Cores.TEXT_RED + "            9 - Sair                 " + Cores.TEXT_RESET);
 			System.out.println("                                                     ");
 			System.out.println("*****************************************************");
-			System.out.println("Entre com a opção desejada:                          ");
-			System.out.println("                                                     " + Cores.TEXT_RESET);
+			System.out.println(Cores.TEXT_WHITE_BOLD + "Entre com a opção desejada:                          ");
+			System.out.println("                                                     ");
 
 			opcao = leia.nextInt();
 
@@ -78,7 +76,7 @@ public class menu {
 				titular = leia.nextLine();
 
 				do {
-					System.out.println("Digite o Tipo da Conta (1-CC ou 2-CP): ");
+					System.out.println("Digite o Tipo da Conta \n1 - Conta Corrente" + "\n2 - Conta poupança: ");
 					tipo = leia.nextInt();
 				} while (tipo < 1 && tipo > 2);
 
